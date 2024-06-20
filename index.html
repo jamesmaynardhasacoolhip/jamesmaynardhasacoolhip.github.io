@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Maynard has a cool hip</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #1f1f1f;
+        }
+
+        p {
+            max-width: 300px;
+            color: #ccc;
+            text-align: justify;
+            font-family: "Roboto", sans-serif;
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>James Maynard has <span id="hips"></span><noscript>a cool hip.</noscript></p>
+
+    <script>
+        const HIPS = [
+            "a cool hip.",
+            "a transcendental hip.",
+            "two hips.",
+            "no hips.",
+        ];
+        let day = (new Date()).getDate();
+        document.getElementById("hips").innerText = HIPS[day % HIPS.length];
+    </script>
+</body>
+
+</html>
